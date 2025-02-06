@@ -27,7 +27,7 @@ jobs:
         username: ${{ env.DOCKER_REGISTRY_USER }}
         password: ${{ env.DOCKER_REGISTRY_PASS }}
 
-    - name: Deploy to swarm
+    - name: deploy to swarm
       run: |
         echo "$DOCKER_REGISTRY_PASS" | docker login --username "$DOCKER_REGISTRY_USER" --password-stdin
         docker stack deploy -c stack.yaml <stack-name>
