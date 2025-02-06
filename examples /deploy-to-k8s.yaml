@@ -1,4 +1,4 @@
-name: Deploy to k8s
+name: deploy to k8s
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
         context: .
         push: true
 
-    - name: Deploy to k8s
+    - name: deploy to k8s
       uses: appleboy/kubectl-action@v1.0.0
       with:
         args: apply -f deployment.yaml
